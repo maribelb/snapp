@@ -1,0 +1,22 @@
+<div class="container"><p>
+<!--	<p></p>
+	<p> <% if user_signed_in?%>
+			<%= 'Hello, ' + current_user.first_name + ' ' + current_user.last_name %> <%= link_to('Sign Out', destroy_user_session_path, method: :delete, class:"btn btn-default btn-xs")%>
+		<% else%>
+			<%= link_to('Sign In', new_user_session_path, class:"btn btn-default btn-xs")%>
+		<%end%>
+	</p><hr>
+-->	
+	<table class="table"><tr><th><h2><%= @event.title %></h2></th></tr>
+		<tr><td><%= @event.time %></td><td><%= @event.date %></td><td><%= @event.location%></td></tr>
+ <tr><td colspan="3">  <%= @event.description %></td></tr>
+</table>
+
+<p>
+ 
+<%= link_to 'Edit Event', edit_event_path(@event), class:"btn btn-default" %> 
+<p>
+	<hr>
+<%= link_to 'Back to Events', events_path, class:"btn btn-info" %>
+
+</div>

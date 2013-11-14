@@ -1,0 +1,18 @@
+<h2>Questions</h2>
+
+<table class="table table-bordered">
+	<tr>
+		<th>Title</th>
+		<th>Text</th>
+		<th>Value</th>
+		
+	</tr>
+	<% @questions.each do |question| %>
+		<tr>
+			<td><%= link_to(question.title, edit_question_path(question) ) %></td>
+			<td><%= question.text %></td>
+			<td><%= question.value %></td>
+		</tr>
+		<% end %>
+	</table>
+	

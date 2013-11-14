@@ -1,25 +1,26 @@
 class PostsController < ApplicationController
-  #Jason Ryan
-  #2013.11.7
+
   def new
-    
+    @post = Post.new
   end
+
   def create
-    
   end
+
   def edit
-    
+    @post = Post.find(params[:id])
   end
+
   def update
-    
   end
+
   def destroy
-    
   end
+
   def index
-    
   end
+
   def show
-    
   end
+
 end

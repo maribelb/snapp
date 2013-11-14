@@ -1,0 +1,10 @@
+<h1>Images#index</h1>
+<p>Find me in app/views/images/index.html.erb</p>
+
+<% @albums.each do |album| %>
+  <p> <%= album.title %> </p>
+  <% album.images.each do |image| %>
+    <%= image_tag image.file , {height: 100} %>
+  <% end  %>
+  <br/>
+<% end  %>
