@@ -1,0 +1,23 @@
+<div class="container">
+<p>
+	<%= @messages.created_at %>
+</p>
+
+<p>
+	<strong>Subject</strong>
+  	<%= @messages.subject %>
+</p>
+
+<p>
+	<strong>Message</strong>
+	<%= @messages.text %>
+</p>
+
+<h2>Reply</h2>
+<%= render 'form' %>
+</div>
+
+  
+
+
+
