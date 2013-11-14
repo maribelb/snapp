@@ -23,7 +23,8 @@ class ImagesController < ApplicationController
   end
 
   def index
-    @images = Image.all
+    @user = current_user
+    @albums = current_user.albums
   end
 
   def show
