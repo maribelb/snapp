@@ -1,0 +1,47 @@
+<h1>Snapp Inbox</h1>
+
+<p>
+  <% if user_signed_in? %>
+    <%= 'Hello! ' + current_user.email %> |
+    <%= link_to( 'Sign out', destroy_user_session_path, {method: :delete} )%>
+  <% else %>
+    <p>
+      Not Signed In? 
+      <%= link_to( 'Sign in', new_user_session_path ) %>
+    </p>
+  <% end%>
+</p>
+
+<% if user_signed_in? %>
+  <%= link_to 'New Message', new_user_message_path, class: "btn btn-primary"%>
+<% end %>  
+<%= link_to 'Archived Messages', archive_user_messages_path, class: "btn btn-success" %>
+
+<table class="table table-hover">
+  <tr>
+    <th>Subject</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>    
+  </tr>
+ 
+  <% @messages.each do |message| %>
+    <tr>
+      <td><%= message.subject %></td>
+      <td><%= message.text %></td>
+      <td><%= link_to 'Show', user_message_path(message) %></td>
+      
+      <% if user_signed_in? %>
+        <td><%= link_to 'Edit', edit_user_message_path(message) %></td>
+        <td><%= link_to 'Destroy', user_message_path(message), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% else %>
+        <td></td>
+        <td></td>
+      <% end %>
+      
+      
+      
+    </tr>
+  <% end %>
+</table>

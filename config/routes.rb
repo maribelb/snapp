@@ -11,7 +11,11 @@ Snapp::Application.routes.draw do
     resource :profile
     resource :interests
     resources :follows
-    resources :messages
+    resources :messages do
+      collection do
+        get "archive"
+      end
+    end
     resources :images
     resources :albums
   end
