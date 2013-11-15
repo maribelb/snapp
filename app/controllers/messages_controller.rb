@@ -39,7 +39,7 @@ class MessagesController < ApplicationController
   end
   
   def index
-    @messages = Message.order("created_at desc").limit(5)
+    @messages = Message.order("created_at desc").limit(15)
   end
   
   def destroy

@@ -1,0 +1,17 @@
+<div class="container">
+	<h2 class="text-primary">Messages</h2>
+
+<table>
+<% @messages.each do |message| %>
+	<tr>
+		<td><%= message.created_at %></td>
+		<td><%= message.subject %></td>
+		<td><%= message.text %></td>
+		<td><%= link_to 'Delete', message_path(message),
+	                    method: :delete, data: { confirm: 'Remove forever?' } %></td>
+	</tr>
+<% end %>
+</table>
+</div>
+
+
