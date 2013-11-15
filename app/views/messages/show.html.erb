@@ -1,0 +1,33 @@
+<div class="container">
+  <br>
+  <div>
+    <%= 'Author: ' + @message.user.name %>
+  </div>
+  
+  <div>
+    <h3><strong>Title:</strong></h3>
+    <p><%= @message.subject %></p>
+  </div>
+ 
+  <div>
+    <h3><strong>Text:</strong></h3>
+    <p><%= @message.text %></p>
+  </div>
+
+   <%= link_to 'Edit Message', edit_user_message_path(@message) %> |
+   <%= link_to 'Back to Messages', user_messages_path %>
+   <br>
+ 
+  <h3>Comments</h3>
+  <%= render @message.comments %>
+
+  <h3>Add a comment:</h3>
+  <%= render "comments/form" %>
+  <br>    
+  <h3>Tags</h3>
+  <%= render @message.tags %>
+
+  <h3>Add Tags</h3>
+  <%= render "tags/form" %>
+  <br>
+</div>
