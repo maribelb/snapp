@@ -9,12 +9,20 @@
   </tr>
 <ul>
 <% @users.each do |user| %>
+<<<<<<< HEAD
+	<% unless user.first_name.nil? %>
+		<% unless user.last_name.nil? %>
+			<li><%= user.first_name  + ' ' + user.last_name %></li>
+		<% end %>
+	<% end %>			
+=======
 <tr>
   <td><%= user.id %></td>
   <td><%= user.first_name %></td>
   <td><%= user.last_name %></td>
   <td><%= user.email %></td>
 </tr>
+>>>>>>> 6bfdf47b562bdb4e4888fabc6a109ac90196d2f4
 <% end %>
 </ul>
 </table>
