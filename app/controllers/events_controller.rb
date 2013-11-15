@@ -4,7 +4,7 @@ class EventsController < ApplicationController
 	end
 	
 	def create
-		@event Event.new(params[:event].permit(:file))
+		@event = Event.new(params[:event].permit(:file))
 		@event.save
 	end
 		
