@@ -1,0 +1,76 @@
+<%= form_for @profile do |f| %>
+
+  <% if @profile.errors.any? %>
+
+  <div id="errorExplanation">
+
+    <h2><%= pluralize(@profile.errors.count, "error") %> prohibited your profile from being created!</h2>
+
+    <ul>
+
+    <% @profile.errors.full_messages.each do |msg| %>
+
+      <li><%= msg %></li>
+
+    <% end %>
+
+    </ul>
+
+  </div>
+
+<% end %>
+
+
+<div>
+
+  <p>
+    <%= f.file_field :avatar %>
+  
+  </p>
+  
+
+  <p>
+
+    <label><%= f.label :location %></label>
+    
+    <br>
+
+    <%= f.text_field :location %>
+
+  </p>
+
+
+  <p>
+
+    <label><%= f.label :website %></label>
+    
+    <br>
+
+    <%= f.text_field :website %>
+
+  </p>
+  
+  
+  
+  <p>
+
+    <label><%= f.label :bio %></label>
+    
+    <br>
+
+    <%= f.text_area :bio %>
+
+  </p>
+  
+  
+  <p>
+
+    <button type="submit" class="btn"><%= f.submit %></button>
+
+  </p>
+  
+
+</div>
+
+<% end %>
+
