@@ -1,0 +1,19 @@
+<!-- posts#show -->
+<div class="container">
+	<table class = "table">
+	<td>
+		<h2 class="text-info"><%= @post.title %></h2>
+		<%= 'By: ' + @user.name %>
+
+		<p><%= @post.text %></p>
+		<p><%= 'likes:' + @post.likes.count %></p>
+		<p><%= 'dislikes:' + @post.dislikes.count %></p>
+		
+	</td>
+	<td>
+	<% post.comments.each do |comment| %>
+		<%= comment.text %>
+	<% end %>
+	</td>
+	</table>
+</div>
