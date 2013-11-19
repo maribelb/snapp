@@ -1,0 +1,5 @@
+<h1><center><%= @album.title %> by <%= @album.user.first_name %></center></h1>
+<p><center> Here is where all photos uploaded to <%= @album.title %> will be displayed </center></p>
+
+
+<center>	<%= link_to 'Back to Albums', user_albums_path, class: 'btn btn-default'  %> </center>
