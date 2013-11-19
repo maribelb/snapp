@@ -8,7 +8,9 @@ Snapp::Application.routes.draw do
       resources :likes
       resources :dislikes
     end
-    resource :profile
+    resources :profile do
+      resources :avatar
+    end
     resource :interests
     resources :follows
     resources :messages do
