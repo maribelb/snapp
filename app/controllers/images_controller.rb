@@ -29,6 +29,5 @@ class ImagesController < ApplicationController
 
   def show
     @image = Image.find(params[:id])
-    @images = Image.all
   end
 end
