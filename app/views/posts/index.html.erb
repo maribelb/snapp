@@ -1,0 +1,19 @@
+<!-- posts#index -->
+<div class="container">
+	<table class ="table">
+		<h2 class="text-info"><%= 'Listing all posts by ' + @user.name %></h2>
+		<%= ' Sorted from newest to oldest.' %>
+		<% @posts.reverse! %> <!-- shows newest to oldest -->
+		<% i = 1 %>
+		<% @posts.each do |post| %>
+			<tr>
+			<td style ="font-size:24px"><%= i %></td>
+			<td><%= post.title %></td>
+			<td><%= 'by' + post.user.name %></td>
+			<td><%= 'likes:' + post.likes.count %></td>
+			<td><%= 'dislikes:' + post.dislikes.count %></td>
+			</tr>
+			<% i = i + 1 %>			
+		<% end %>
+	</table>
+</div>
