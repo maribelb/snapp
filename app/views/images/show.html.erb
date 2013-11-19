@@ -1,8 +1,6 @@
 <h1>Images</h1>
 <p>
-<% @images.each do |image|%>
-	<%= image.file %>
-<% end %>
+	<%= @image.file %>
 </p>
 
 <%= link_to 'Back to Albums', user_albums_path, class: 'btn btn-default' %>
