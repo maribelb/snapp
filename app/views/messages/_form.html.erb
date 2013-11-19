@@ -1,4 +1,4 @@
-<%= form_for @message do |f| %>
+<%= form_for @message, url: new_user_message_path do |f| %>
   <% if @message.errors.any? %>
   <div id="errorExplanation">
     <h2><%= pluralize(@message.errors.count, "error") %> Prohibited this message from being sent:</h2>
