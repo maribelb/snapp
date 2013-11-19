@@ -1,9 +1,12 @@
 <h1> Groups </h1>
 
+<h4><li> <%= link_to 'Create Group', "http://localhost:3000/groups/new" %></li></h4>
+<br/>
+
 <% @group.each do |group| %>
 
   <br/>
-  <p> <%= group.name %> </p>
-  <p> <%= group.description %> </p>
+  	<p> <h2><%= link_to group.name,  group_path(group) %></h2> </p>
+  	<p> <%= group.description %> </p>
   
 <% end  %>
