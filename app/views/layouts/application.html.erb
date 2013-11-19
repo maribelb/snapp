@@ -26,6 +26,9 @@
     <ul class="nav navbar-nav">
 <!--       <li class="active"><a href="#">Link</a></li> -->
       <li><%= link_to 'Stuff', "http://" %></li>
+	  <li><%= link_to 'Posts', "http://" %></li>
+	  <li><%= link_to 'Questions', "http://" %></li>
+	  <li><%= link_to 'Groups', groups_path %></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
